@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #4a4a4a;
+
+}
+.menu{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%,-50%);
+    /* display: flex; */
+}
+.menu li{
+    list-style: none;
+    margin: 10px 25px;
+    display: flex;
+}
+.menu li a i{
+    font-size: 35px;
+    color: #333;
+    transition: .5s;
+    padding-right: 14px;
+}
+.menu li a span{
+    color: #333;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+.menu li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: 210px;
+    height: 80px;
+    background: #fff;
+    padding-left: 20px;
+    position: relative;
+    transition: 0.5s;
+}
+.menu li a::before{
+    content:'';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background: #cecece;
+    transition: 0.5s;
+    transform: skewY(-45deg);
+}
+.menu li a::after{
+    content:'';
+    position: absolute;
+    bottom:-20px ;
+    left: -10px;
+    height: 20px;
+    width: 100%;
+    background: #cecece;
+    transition: 0.5s;
+    transform: skewX(-45deg);
+}
+.menu li:hover i{
+    color: #fff;
+}
+.menu li:hover span{
+    color: #fff;
+}
+.menu li:hover .ab{
+    background: #5e29af;
+    transform:translate(15px,-15px) ;
+    box-shadow: -50px 50px 50px rgba(0,0, 0, 0.5);
+}
+.menu li:hover .ab::before{
+    background: #3a1179;
+}
+.menu li:hover .ab::after{
+    background: #7b60dd;
+}
+.dropdown li{
+    display: block;
+    margin: 0 28px;
+}
+.dropdown{
+    width: 100%;
+    position: absolute;
+    display: none;
+    left: 120%;
+    top: 31%;
+    margin-left: -60px;
+
+}
+.menu li ul .dropdown{
+    display:flex;
+}
+/* hehe */
+.menu li:hover > .dropdown{ 
+    display: flex;
+    animation: slideup .6s ease;
+}
+@keyframes slideup{
+    0%{
+        opacity: 0;
+        transform: translateX(-15rem);
+    }
+    90%{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.menu li:hover .dropdown li .abc{
+    background: #fff;
+    width: 210px;
+    height: 80px;
+    transition: 0.5s;
+}
+.menu li:hover .dropdown li .abc:before{
+    background: #cecece;
+    content:'';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    transition: 0.5s;
+    transform: skewY(-45deg);
+}
+.menu li:hover .dropdown li .abc::after{
+    background: #cecece;
+    content:'';
+    position: absolute;
+    bottom:-20px ;
+    left: -10px;
+    height: 20px;
+    width: 100%;
+    transition: 0.5s;
+    transform: skewX(-45deg);
+}
+.menu li .dropdown li:hover .abc{
+    background: #5e29af;
+    transform:translate(15px,-15px) ;
+    box-shadow: -50px 50px 50px rgba(0,0, 0, 0.5);
+}
+.menu li .dropdown li:hover .abc::before{
+    background: #3a1179;
+}
+.menu li .dropdown li:hover .abc::after{
+    background: #7b60dd;
+}
+.dropdown li .abc span{
+    color: #333;
+}
+.dropdown li:hover span{
+    color: #fff;
+}
