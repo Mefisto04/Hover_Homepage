@@ -4,10 +4,12 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
+
 body{
     background: #4a4a4a;
 
 }
+
 .menu{
     position: absolute;
     top: 50%;
